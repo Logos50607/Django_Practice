@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+      <h1>問卷結果</h1>
+      {% if questionnaire_list %}
+        <table>
+        {% for answer in questionnaire_list %}
+          <tr>
+            <td>{{ answer.userName }}</td>
+            <td>{{ answer.gender }}</td>
+            <td>{{ answer.favoriteCity }}</td>
+            <td>{{ answer.reason }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+      </ul>
+      {% else %}
+        <p>目前尚無結果！</p>
+      {% endif %}
+     </body>
+  </html>
